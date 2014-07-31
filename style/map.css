@@ -1,0 +1,33 @@
+@import url("eestec.css");
+
+.subunit { fill: #595757; }
+.river { stroke : #3f3f3f; fill: none; opacity: 0.3; }
+.road { fill: none; stroke: #111; opacity: 0; }
+.place-dot { fill: #5f5; stroke: #222 }
+.place-label {
+  font-size: 15px;
+  color: #fff;
+  /*font-weight: bold;
+  font-style: italic;*/
+  font-family: "Arial";
+  /*text-shadow: 5px 5px 5px black;*/
+}
+.subunit-boundary {
+  fill: none;
+  stroke: #660000;
+  stroke-width: 1;
+  stroke-dasharray: 5,5;
+  stroke-linejoin: round;
+}
+
+.subunit-label {
+  fill: #fff;
+  font-style: italic;
+  font-family: "Helvetika","Arial";
+  fill-opacity: .0;
+  font-size: 17px;
+  font-weight: 300;
+  text-anchor: middle;
+}
+
+

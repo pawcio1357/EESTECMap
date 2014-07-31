@@ -1,0 +1,158 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Antwerp",
+                "NAMEASCII": "Antwerp",
+                "SOV_A3": "BEL",
+                "LATITUDE": 51.2167,
+                "LONGITUDE": 4.4
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.4,
+                    51.2167
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "East Sarajevo",
+                "NAMEASCII": "East Sarajevo",
+                "SOV_A3": "BIH",
+                "LATITUDE": 43.8167,
+                "LONGITUDE": 18.35
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    18.35,
+                    43.8167
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Warwick",
+                "NAMEASCII": "Warwick",
+                "SOV_A3": "GBR",
+                "LATITUDE": 52.28,
+                "LONGITUDE": -1.59
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -1.59,
+                    52.28
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Aachen",
+                "NAMEASCII": "Aachen",
+                "SOV_A3": "GER",
+                "LATITUDE": 50.7753,
+                "LONGITUDE": 6.0828
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.0828,
+                    50.7753
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Keiserlautern",
+                "NAMEASCII": "Keiserlautern",
+                "SOV_A3": "GER",
+                "LATITUDE": 49.4447,
+                "LONGITUDE": 7.7689
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.7689,
+                    49.4447
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Patras",
+                "NAMEASCII": "Patras",
+                "SOV_A3": "GRC",
+                "LATITUDE": 38.25,
+                "LONGITUDE": 21.7333
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    21.7333,
+                    38.25
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Delft",
+                "NAMEASCII": "Delft",
+                "SOV_A3": "NLD",
+                "LATITUDE": 52.0167,
+                "LONGITUDE": 4.3667
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    4.3667,
+                    52.0167
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Cosenza",
+                "NAMEASCII": "Cosenza",
+                "SOV_A3": "ITA",
+                "LATITUDE": 39.3,
+                "LONGITUDE": 16.25
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    16.25,
+                    39.3
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Famagusta",
+                "NAMEASCII": "Famagusta",
+                "SOV_A3": "CYP",
+                "LATITUDE": 35.1167,
+                "LONGITUDE": 33.95
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    33.95,
+                    35.1167
+                ]
+            }
+        }
+    ]
+}

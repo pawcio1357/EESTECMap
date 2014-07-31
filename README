@@ -1,0 +1,48 @@
+Paweł Maślak
+
+To use, you need the following tools:
+- Geospatial Data Abstraction Library (GDAL) - http://trac.osgeo.org/gdal/wiki/DownloadingGdalBinaries
+- Node.js - http://nodejs.org/download/
+- TopoJSON - after installing Node.js in the terminal type 
+	npm install -g topojson
+- Make
+
+
+
+The up-to-date geodata is downloaded from Natural Earth, unzipped and processed to produce an easily adjustable EESTEC map.
+
+To edit the countries highlighted as those with EESTEC LCs edit the COUNTRIES variable in Makefile - you have to use country codes from ISO 3166-1 alpha-3 (http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3).
+
+To edit the cities with LCs edit the CITIES variable in Makefile.
+
+EESTEC countries which are outside Europe should be added to the OUT-EUROPE variable in Makefile.
+
+The style of the EESTEC countries highlight can be edited in the $(COUNTRIES) rule in Makefile(this will later be included in style/eestec.css).
+All the other styles can be edited in the file style/map.css
+
+
+
+
+
+To generate the map, in the root folder type:
+	make
+The map will then be available in map.html in the root folder.
+
+You can preview the map here: http://student.agh.edu.pl/~pmaslak/EESTECMap/map.html
+
+With any questions contact maslak.pawel.1357@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

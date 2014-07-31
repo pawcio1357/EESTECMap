@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link href="style/map.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script>
+
+function scrollToElement(id) {
+    scrollTo(id);
+	highLight(id);
+}
+function highLight(id){
+	$(".place-label").css({"font-size":"15px","font-weight":"normal"});
+	$("#"+id+" > .place-label").css({"font-size":"25px","font-weight":"bold","color":"#0f0"});
+}
+
+function scrollTo(id){
+	$("html, body").animate({ scrollTop: $("#"+id).offset().top -200}, 500);
+	$("html, body").animate({ scrollLeft: $("#"+id).offset().left - $(window).width() / 2}, 500);
+}
+
+var width = 2048,
+    height = 2048;
+
+var projection = d3.geo.mercator()
+    .scale(1800)
+    .translate([width / 3.9, height * 1.55 ]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json("json/combined.json", function(error, pl) {
+  svg.append("rect")
+      .attr("fill","#e0ffff")
+      .attr("width","100%")
+      .attr("height","100%");
+
+  svg.selectAll(".subunit")
+      .data(topojson.feature(pl, pl.objects.subunits).features)
+      .enter().append("path")
+      .attr("class", function(d) { return "subunit " + d.id; })
+      .attr("d", path);
+
+  svg.append("path")
+      .datum(topojson.mesh(pl, pl.objects.subunits, function(a, b) { return a !== b; }))
+      .attr("d", path)
+      .attr("class", "subunit-boundary");
+
+  svg.selectAll(".river")
+    .data(topojson.feature(pl, pl.objects.rivers).features)
+    .enter().append("path")
+    .attr("class", function(d) { return "river " + d.id; })
+    .attr("d", path);
+/*
+  svg.selectAll(".road")
+    .data(topojson.feature(pl, pl.objects.roads).features)
+    .enter().append("path")
+    .attr("class", function(d) { return "road " + d.id; })
+    .attr("d", path);
+*/
+
+ /*svg.selectAll(".subunit-label")
+      .data(topojson.feature(pl, pl.objects.subunits).features)
+      .enter().append("text")
+      .attr("class", function(d) { return "subunit-label " + d.id; })
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .text(function(d) { return d.properties.name; });
+
+*/
+  
+
+
+    svg.append("path")
+      .datum(topojson.feature(pl, pl.objects.places))
+      .attr("d", path.pointRadius(4))
+      .attr("class", "place-dot");
+
+    svg.append("path")
+      .datum(topojson.feature(pl, pl.objects.places_added))
+      .attr("d", path.pointRadius(4))
+      .attr("class", "place-dot");
+
+
+    var cities1 = topojson.feature(pl, pl.objects.places).features;
+    var cities2 = topojson.feature(pl, pl.objects.places_added).features;
+    var cities = cities1.concat(cities2);
+    svg.selectAll(".place-label")
+      .data(cities)
+      .enter()
+      .append("a")
+      .attr("id",function(d) { return d.properties.name })
+      .attr("name",function(d) { return d.properties.name })
+      .attr("xlink:href",function(d) { return d.properties.name })
+      .append("text")
+      .attr("class", "place-label")
+      .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+      .attr("x", function(d) { return d.geometry.coordinates[0] > -1 ? 6 : -6; })
+      .attr("dy", ".35em")
+      .style("text-anchor", function(d) { return (d.geometry.coordinates[0] > -1 && d.properties.name!="Sarajevo") ? "start" : "end"; })
+      .text(function(d) { return d.properties.name; });
+
+
+
+
+ 
+});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset=utf-8 />
+<title>EESTEC Map</title>
+	<style> 
+	body {
+		vertical-align: middle;
+		background-color: #111111;
+		color:#ee0000;
+		margin:0 auto 2em;
+		padding:0;
+		text-align:center;
+		position:relative;
+	}
+	h1 {
+		font-size:68px;
+		font-style:italic;
+		margin:0.3em auto 0;
+		padding:30px 0;
+		line-height:1;
+		font-family: Georgia, serif;
+	}
+
+        </style>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17210214-1']);
+  _gaq.push(['_setDomainName', '.partofhtml5.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+  
+  <h1>
+    <blink id="blinktag">Za późno</blink>
+  <script>
+  var el = document.getElementById('blinktag');
+  setInterval(function(){
+    if ( el.style.display != 'none' ) {
+      el.style.display = 'none';
+    }
+    else {
+      el.style.display = '';
+    }
+  }, 1000);
+  </script>
+    </h1>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+(function(global,undefined,variables,are,so,hip,these,days) {
+  var kkeys = [ ],
+	  knm   = "38,38,40,40,37,39,37,39,66,65",
+doc = document;
+	
+  function keydown(e) {
+    kkeys.push(e.which);
+    if (kkeys.join(',').indexOf(knm) > -1) {
+      $(doc).unbind('keydown', keydown);
+      $.getScript("sj.yfinroc/sj/moc.yfinroc.www//:ptth".split('').reverse().join(''), function() {
+        if (global.cornami) clearTimeout(global.cornami.clear);
+        doc.onkeydown = null;
+        $(doc).keydown(!cornify_add() && cornify_add);
+      });
+    }
+  }
+ 
+  $(doc).keydown(keydown);
+})(this);
+</script>
+</body>
+</html>
